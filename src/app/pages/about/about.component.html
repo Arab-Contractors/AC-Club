@@ -1,0 +1,50 @@
+<section class="about-hero">
+  <div class="container">
+    <h1 class="page-title">About <span class="text-gradient">AC Club</span></h1>
+    <p class="page-subtitle">Building champions, creating legends, inspiring futures</p>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="container">
+    <h2 class="section-title">Our Story</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let item of storyItems">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">{{ item.year }}</div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="container">
+    <h2 class="section-title">Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card" *ngFor="let value of values">
+        <div class="value-icon">{{ value.icon }}</div>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="leadership-section">
+  <div class="container">
+    <h2 class="section-title">Our <span class="text-gradient">Leadership</span></h2>
+    <div class="leadership-grid">
+      <div class="leader-card" *ngFor="let leader of leadership">
+        <div class="leader-image-wrapper">
+          <img [src]="leader.image" [alt]="leader.name" class="leader-image">
+        </div>
+        <h3 class="leader-name">{{ leader.name }}</h3>
+        <p class="leader-role">{{ leader.role }}</p>
+      </div>
+    </div>
+  </div>
+</section>

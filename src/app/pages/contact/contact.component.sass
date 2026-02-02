@@ -1,0 +1,143 @@
+.contact-hero
+  padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl)
+  text-align: center
+  background: var(--bg-secondary)
+
+.contact-section
+  padding: var(--spacing-xl) 0
+  background: var(--bg-primary)
+
+.contact-grid
+  display: grid
+  grid-template-columns: 1fr 1.5fr
+  gap: var(--spacing-xl)
+
+  @media (max-width: 968px)
+    grid-template-columns: 1fr
+
+.contact-info
+  h2
+    font-size: 2rem
+    margin-bottom: var(--spacing-sm)
+    color: var(--color-secondary)
+    text-shadow: var(--shadow-glow-text)
+
+  p
+    color: var(--text-secondary)
+    margin-bottom: var(--spacing-lg)
+
+.contact-info-list
+  display: flex
+  flex-direction: column
+  gap: var(--spacing-md)
+
+.contact-info-item
+  display: flex
+  gap: var(--spacing-md)
+  padding: var(--spacing-md)
+  background: var(--glass-bg)
+  backdrop-filter: var(--glass-blur)
+  border: 1px solid var(--glass-border)
+  border-radius: 15px
+  transition: all var(--transition-normal)
+
+  &:hover
+    transform: translateX(10px)
+    border-color: var(--color-secondary)
+    box-shadow: var(--shadow-glow-yellow)
+
+.info-icon
+  font-size: 2rem
+  display: flex
+  align-items: center
+  justify-content: center
+
+.info-content
+  flex: 1
+
+.info-label
+  font-size: 0.85rem
+  color: var(--text-muted)
+  text-transform: uppercase
+  letter-spacing: 1px
+  margin-bottom: 0.25rem
+
+.info-value
+  color: var(--text-primary)
+  font-weight: var(--font-medium)
+
+.contact-form
+  background: var(--glass-bg)
+  backdrop-filter: var(--glass-blur)
+  border: 1px solid var(--glass-border)
+  border-radius: 20px
+  padding: var(--spacing-lg)
+  display: flex
+  flex-direction: column
+  gap: var(--spacing-md)
+
+.form-group
+  display: flex
+  flex-direction: column
+  gap: var(--spacing-xs)
+
+  label
+    color: var(--color-secondary)
+    font-weight: var(--font-semibold)
+    font-size: 0.9rem
+    text-transform: uppercase
+    letter-spacing: 1px
+
+  input,
+  textarea
+    padding: var(--spacing-sm) var(--spacing-md)
+    background: rgba(255, 255, 255, 0.05)
+    border: 2px solid var(--glass-border)
+    border-radius: 10px
+    color: var(--text-primary)
+    font-family: var(--font-primary)
+    font-size: 1rem
+    transition: all var(--transition-normal)
+
+    &:focus
+      outline: none
+      border-color: var(--color-secondary)
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.3)
+      animation: borderGlow 1.5s ease-in-out infinite
+
+    &::placeholder
+      color: var(--text-muted)
+
+    &.error
+      border-color: #ff4444
+
+  textarea
+    resize: vertical
+    min-height: 120px
+
+.error-message
+  color: #ff4444
+  font-size: 0.85rem
+  margin-top: -0.5rem
+
+.submit-btn
+  padding: var(--spacing-sm) var(--spacing-md)
+  background: var(--gradient-primary)
+  color: var(--bg-primary)
+  border: none
+  border-radius: 50px
+  font-weight: var(--font-bold)
+  text-transform: uppercase
+  letter-spacing: 1px
+  cursor: pointer
+  transition: all var(--transition-normal)
+  margin-top: var(--spacing-sm)
+
+  &:hover:not(:disabled)
+    transform: translateY(-3px)
+    box-shadow: var(--shadow-glow-yellow-strong)
+    animation: borderGlow 1s ease-in-out infinite
+
+  &:disabled
+    opacity: 0.5
+    cursor: not-allowed

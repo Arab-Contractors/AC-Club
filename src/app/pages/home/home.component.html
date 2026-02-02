@@ -1,0 +1,303 @@
+<!-- Hero: player in kit with stadium blur + headline -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="assets/imgs/WhatsApp%20Image%202026-01-20%20at%203.41.56%20PM.jpeg" alt="Player - المقاولون العرب" class="hero-player-img">
+    <div class="hero-glow"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" aria-hidden="true"></div>
+  </div>
+  <div class="hero-content">
+    <h1>انتصار جديد للمقاولون العرب!</h1>
+    <a href="#" class="hero-cta">اقرا المزيد</a>
+  </div>
+</section>
+
+<!-- Main grid: 3 columns (inspo layout) -->
+<section class="main-grid">
+  <div class="container">
+    <div class="grid-three">
+      <!-- Column 1 (RTL right): Match + Table + Video -->
+      <div class="col-side">
+        <div class="card card-gold">
+          <h3 class="card-title">المباراة القادمة</h3>
+          <div class="match-versus">
+            <div class="team-logo home"><img src="https://via.placeholder.com/56/FFD700/000000?text=AC" alt=""></div>
+            <span class="vs">VS</span>
+            <div class="team-logo away"><img src="https://via.placeholder.com/56/1a1a1a/FFFFFF?text=OP" alt=""></div>
+          </div>
+          <p class="match-detail">الجمعة 12 ديسمبر | الدوري - المقاولون العرب</p>
+          <div class="card-btns">
+            <button type="button" class="btn-ghost">المزيد من المعلومات</button>
+            <button type="button" class="btn-gold">احجز تذكرتك</button>
+          </div>
+        </div>
+
+        <div class="card card-gold">
+          <h3 class="card-title">ترتيب الدوري</h3>
+          <ul class="standings-list">
+            <li *ngFor="let team of leagueTable" [class.highlight]="team.highlight">
+              <span class="pos">{{ team.position }}</span>
+              <span class="name">{{ team.name }}</span>
+            </li>
+          </ul>
+          <button type="button" class="btn-ghost full">الجدول الكامل</button>
+        </div>
+
+        <div class="card card-gold">
+          <h3 class="card-title">مكتبة التسجيلات</h3>
+          <div class="video-preview">
+            <span class="play-icon">▶</span>
+            <div class="video-bar">
+              <span>0:21</span>
+              <div class="bar"><div class="fill"></div></div>
+              <span>0:09</span>
+            </div>
+          </div>
+          <div class="video-thumbs">
+            <div class="thumb" *ngFor="let v of videoPlaylist">
+              <img [src]="v.thumbnail" [alt]="v.title">
+              <span class="play-sm">▶</span>
+            </div>
+          </div>
+          <button type="button" class="btn-ghost full">مشاهدة المزيد</button>
+        </div>
+      </div>
+
+      <!-- Column 2 (center): Featured + News -->
+      <div class="col-center">
+        <div class="featured-main">
+          <div class="featured-caption">
+            <h3>المقاولون العرب على الإسماعيلي</h3>
+            <button type="button" class="btn-ghost-light">شاهد الآن</button>
+          </div>
+        </div>
+
+        <div class="center-cards-row">
+          <div class="card card-gold center-card">
+            <h3 class="card-title">تذاكر المباراة</h3>
+            <p class="center-card-text">احجز تذكرتك لمباراة المقاولون العرب ضد الإسماعيلي</p>
+            <button type="button" class="btn-gold full">احجز الآن</button>
+          </div>
+          <div class="card card-gold center-card">
+            <h3 class="card-title">معرض الصور</h3>
+            <div class="center-gallery-preview">
+              <a href="#" class="center-gallery-thumb" *ngFor="let img of galleryPreview">
+                <img [src]="img.src" [alt]="img.alt">
+              </a>
+            </div>
+            <button type="button" class="btn-ghost full">عرض المعرض</button>
+          </div>
+        </div>
+
+        <div class="card card-gold news-block">
+          <h3 class="card-title">أخبار النادي</h3>
+          <div class="news-main">
+            <div class="news-featured">
+              <img [src]="clubNews[0].image" [alt]="clubNews[0].title">
+              <span class="play-icon">▶</span>
+              <div class="news-featured-cap">
+                <h4>المقاولون أقوى رجل أيرلندي</h4>
+                <p>اد قمرى التحرري ممرلي العلاوات النوري</p>
+              </div>
+            </div>
+            <div class="news-small-grid">
+              <a href="#" class="news-small" *ngFor="let news of clubNews">
+                <img [src]="news.image" [alt]="news.title">
+                <div class="news-small-text">
+                  <span>{{ news.title }}</span>
+                  <time>{{ news.date }}</time>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button type="button" class="btn-ghost full">مشاهدة المزيد</button>
+        </div>
+      </div>
+
+      <!-- Column 3 (RTL left): Results + Quick Links -->
+      <div class="col-side">
+        <div class="card card-gold">
+          <h3 class="card-title">أخر النتائج</h3>
+          <div class="results-list">
+            <a href="#" class="result-row" *ngFor="let r of latestResults">
+              <div class="result-logos">
+                <img [src]="r.team1Logo" alt="">
+                <span class="score">{{ r.score }}</span>
+                <img [src]="r.team2Logo" alt="">
+              </div>
+              <span class="result-meta">{{ r.competition }} - {{ r.date }}</span>
+              <span class="result-arrow">←</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="card card-gold">
+          <h3 class="card-title">تابعنا</h3>
+          <div class="quick-links">
+            <a [href]="link.href" class="quick-link" *ngFor="let link of quickLinks">
+              <span class="quick-icon">{{ link.icon }}</span>
+              <span>{{ link.label }}</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="card card-gold">
+          <h3 class="card-title">أفضل الهدافين</h3>
+          <ul class="scorers-list">
+            <li *ngFor="let p of topScorers">
+              <span class="scorer-pos">{{ p.rank }}</span>
+              <span class="scorer-name">{{ p.name }}</span>
+              <span class="scorer-goals">{{ p.goals }}</span>
+            </li>
+          </ul>
+          <button type="button" class="btn-ghost full">قائمة الهدافين</button>
+        </div>
+
+        <div class="card card-gold">
+          <h3 class="card-title">روابط سريعة</h3>
+          <div class="quick-links">
+            <a [href]="item.href" class="quick-link" *ngFor="let item of siteLinks">
+              <span class="quick-icon">{{ item.icon }}</span>
+              <span>{{ item.label }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Category cards: الفريق الأول، الأكاديمية، المصوبة، المتجر -->
+<section class="categories">
+  <div class="container">
+    <div class="cat-row">
+      <a href="#" class="cat-card" *ngFor="let cat of categories">
+        <img [src]="cat.image" [alt]="cat.title">
+        <div class="cat-cap">
+          <span class="cat-icon" *ngIf="cat.icon">{{ cat.icon }}</span>
+          <h4>{{ cat.title }}</h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" *ngFor="let stat of stats">
+        <span class="stat-value">{{ stat.value }}</span>
+        <span class="stat-label">{{ stat.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Matches -->
+<section class="upcoming-section">
+  <div class="container">
+    <h2 class="section-heading">المباريات القادمة</h2>
+    <div class="matches-grid">
+      <a href="#" class="match-card" *ngFor="let match of upcomingMatches">
+        <div class="match-date-badge">
+          <span class="day">{{ match.day }}</span>
+          <span class="month">{{ match.month }}</span>
+        </div>
+        <div class="match-info">
+          <span class="match-teams">{{ match.homeTeam }} vs {{ match.awayTeam }}</span>
+          <span class="match-venue">{{ match.venue }}</span>
+        </div>
+        <span class="match-cta">التذاكر ←</span>
+      </a>
+    </div>
+    <a href="#" class="section-link">عرض التقويم الكامل</a>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-box">
+      <h2>اشترك في النشرة الإخبارية</h2>
+      <p>احصل على آخر الأخبار والعروض مباشرة في بريدك</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="البريد الإلكتروني" class="newsletter-input">
+        <button type="submit" class="btn-gold">اشترك</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Preview -->
+<section class="gallery-section">
+  <div class="container">
+    <h2 class="section-heading">معرض الصور</h2>
+    <div class="gallery-grid">
+      <a href="#" class="gallery-item" *ngFor="let img of galleryImages">
+        <img [src]="img.src" [alt]="img.alt">
+      </a>
+    </div>
+    <a href="/gallery" class="section-link">عرض المعرض الكامل</a>
+  </div>
+</section>
+
+<!-- Sponsors Bar -->
+<section class="sponsors-bar">
+  <div class="container">
+    <h3 class="sponsors-title">الشركاء الرئيسيون</h3>
+    <div class="sponsors-grid">
+      <div class="sponsor" *ngFor="let p of partners">
+        <img *ngIf="p.logo" [src]="p.logo" [alt]="p.name">
+        <span *ngIf="!p.logo" class="sponsor-name">{{ p.name }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>المنتجات والخدمات</h4>
+        <ul>
+          <li><a href="#">التذاكر</a></li>
+          <li><a href="#">المتجر الرسمي</a></li>
+          <li><a href="#">العضوية</a></li>
+          <li><a href="#">التطبيق</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>النادي</h4>
+        <ul>
+          <li><a href="#">الملعب</a></li>
+          <li><a href="#">التاريخ</a></li>
+          <li><a href="#">الهوية</a></li>
+          <li><a href="#">الشركاء</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>روابط</h4>
+        <ul>
+          <li><a href="#">الشروط والأحكام</a></li>
+          <li><a href="#">سياسة الخصوصية</a></li>
+          <li><a href="#">الأسئلة الشائعة</a></li>
+          <li><a href="#">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col social-col">
+        <h4>تابعنا</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">© المقاولون العرب. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>

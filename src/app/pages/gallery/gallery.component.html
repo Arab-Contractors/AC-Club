@@ -1,0 +1,34 @@
+<section class="gallery-hero">
+  <div class="container">
+    <h1 class="page-title">Our <span class="text-gradient">Gallery</span></h1>
+    <p class="page-subtitle">Capturing moments of excellence and achievement</p>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-filters">
+      <button 
+        *ngFor="let category of categories"
+        class="filter-btn"
+        [class.active]="selectedCategory === category"
+        (click)="filterByCategory(category)">
+        {{ category }}
+      </button>
+    </div>
+    
+    <div class="gallery-grid">
+      <div 
+        class="gallery-item" 
+        *ngFor="let item of filteredItems">
+        <div class="gallery-image-wrapper">
+          <img [src]="item.image" [alt]="item.title" class="gallery-image">
+          <div class="gallery-overlay">
+            <h3 class="gallery-title">{{ item.title }}</h3>
+            <span class="gallery-category">{{ item.category }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

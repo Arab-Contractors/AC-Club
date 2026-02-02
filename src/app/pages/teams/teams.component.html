@@ -1,0 +1,38 @@
+<section class="teams-hero">
+  <div class="container">
+    <h1 class="page-title">Our <span class="text-gradient">Teams</span></h1>
+    <p class="page-subtitle">Diverse teams, unified excellence</p>
+  </div>
+</section>
+
+<section class="teams-section">
+  <div class="container">
+    <div class="teams-grid">
+      <div 
+        class="team-card" 
+        *ngFor="let team of teams"
+        (mousemove)="onCardHover($event)"
+        (mouseleave)="onCardLeave($event)">
+        <div class="card-glow"></div>
+        <div class="team-image-wrapper" *ngIf="team.image">
+          <img [src]="team.image" [alt]="team.name" class="team-image">
+        </div>
+        <div class="team-icon" *ngIf="!team.image">{{ team.icon }}</div>
+        <div class="team-category">{{ team.category }}</div>
+        <h3 class="team-name">{{ team.name }}</h3>
+        <p class="team-description">{{ team.description }}</p>
+        <div class="team-stats">
+          <div class="stat">
+            <span class="stat-label">Members</span>
+            <span class="stat-value">{{ team.members }}</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Achievements</span>
+            <span class="stat-value">{{ team.achievements }}</span>
+          </div>
+        </div>
+        <button class="team-btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+</section>

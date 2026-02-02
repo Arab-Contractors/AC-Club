@@ -1,0 +1,95 @@
+.gallery-hero
+  padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl)
+  text-align: center
+  background: var(--bg-secondary)
+
+.gallery-section
+  padding: var(--spacing-xl) 0
+  background: var(--bg-primary)
+
+.gallery-filters
+  display: flex
+  justify-content: center
+  gap: var(--spacing-sm)
+  margin-bottom: var(--spacing-lg)
+  flex-wrap: wrap
+
+.filter-btn
+  padding: var(--spacing-xs) var(--spacing-md)
+  background: transparent
+  border: 2px solid var(--glass-border)
+  color: var(--text-secondary)
+  border-radius: 50px
+  font-weight: var(--font-medium)
+  text-transform: uppercase
+  letter-spacing: 1px
+  cursor: pointer
+  transition: all var(--transition-normal)
+  font-size: 0.85rem
+
+  &:hover
+    border-color: var(--color-secondary)
+    color: var(--color-secondary)
+
+  &.active
+    background: var(--gradient-primary)
+    border-color: transparent
+    color: var(--bg-primary)
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3)
+
+.gallery-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  gap: var(--spacing-md)
+
+.gallery-item
+  position: relative
+  border-radius: 20px
+  overflow: hidden
+  aspect-ratio: 4/3
+  cursor: pointer
+  opacity: 1
+
+.gallery-image-wrapper
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.gallery-image
+  width: 100%
+  height: 100%
+  object-fit: cover
+  transition: transform var(--transition-slow)
+
+.gallery-item:hover .gallery-image
+  transform: scale(1.1)
+
+.gallery-overlay
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)
+  padding: var(--spacing-md)
+  transform: translateY(100%)
+  transition: transform var(--transition-normal)
+
+.gallery-item:hover .gallery-overlay
+  transform: translateY(0)
+
+.gallery-title
+  color: var(--text-primary)
+  font-size: 1.25rem
+  margin-bottom: var(--spacing-xs)
+
+.gallery-category
+  display: inline-block
+  padding: 0.25rem 0.75rem
+  background: var(--gradient-primary)
+  color: var(--bg-primary)
+  border-radius: 20px
+  font-size: 0.75rem
+  font-weight: var(--font-semibold)
+  text-transform: uppercase
+  letter-spacing: 1px
