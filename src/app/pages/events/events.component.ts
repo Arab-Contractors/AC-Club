@@ -23,7 +23,7 @@ export class EventsComponent implements AfterViewInit {
       time: '18:00',
       type: 'Competition',
       description: 'The ultimate showdown of the season',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop'
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=250&fit=crop'
     },
     { 
       date: '2024-03-22', 
@@ -41,7 +41,7 @@ export class EventsComponent implements AfterViewInit {
       time: '10:00',
       type: 'Social',
       description: 'A day of fun activities for the whole community',
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=250&fit=crop'
+      image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=400&h=250&fit=crop'
     },
     { 
       date: '2024-04-12', 
@@ -50,7 +50,7 @@ export class EventsComponent implements AfterViewInit {
       time: '09:00',
       type: 'Tournament',
       description: 'Showcasing the next generation of talent',
-      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop'
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=250&fit=crop'
     },
     { 
       date: '2024-04-20', 
@@ -68,7 +68,7 @@ export class EventsComponent implements AfterViewInit {
       time: '19:00',
       type: 'Celebration',
       description: 'Celebrating our achievements and milestones',
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=250&fit=crop'
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop'
     },
     { 
       date: '2024-05-10', 

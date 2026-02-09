@@ -23,7 +23,7 @@ export class TeamsComponent implements AfterViewInit {
       members: 25,
       achievements: '3x Champions',
       icon: '🏆',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop'
     },
     { 
       name: 'Rising Stars', 
@@ -32,7 +32,7 @@ export class TeamsComponent implements AfterViewInit {
       members: 30,
       achievements: '2x Regional Winners',
       icon: '⭐',
-      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop'
     },
     { 
       name: 'Innovation Lab', 
@@ -68,7 +68,7 @@ export class TeamsComponent implements AfterViewInit {
       members: 40,
       achievements: '200+ Graduates',
       icon: '🎓',
-      image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop'
     },
     { 
       name: 'Women\'s Team', 
@@ -77,7 +77,7 @@ export class TeamsComponent implements AfterViewInit {
       members: 22,
       achievements: '2x League Winners',
       icon: '💪',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop'
     },
     { 
       name: 'Elite Coaches', 

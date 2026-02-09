@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   galleryPreview = [
     { src: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=120&h=80&fit=crop', alt: 'المباراة' },
     { src: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=120&h=80&fit=crop', alt: 'الاحتفال' },
-    { src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=120&h=80&fit=crop', alt: 'التدريب' },
+    { src: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=120&h=80&fit=crop', alt: 'التدريب' },
     { src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=120&h=80&fit=crop', alt: 'الجماهير' }
   ];
 
@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   videoPlaylist = [
     { title: 'أهداف المباراة', duration: '03:07', thumbnail: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=400&h=225&fit=crop' },
     { title: 'ملخص المباراة', duration: '02:45', thumbnail: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=225&fit=crop' },
-    { title: 'تصريحات اللاعبين', duration: '01:41', thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=225&fit=crop' },
+    { title: 'تصريحات اللاعبين', duration: '01:41', thumbnail: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=225&fit=crop' },
     { title: 'خلف الكواليس', duration: '05:17', thumbnail: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=225&fit=crop' }
   ];
 
@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     { title: 'الهيئة العليا المصرية', date: '30 ديسمبر', image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=400&h=250&fit=crop', hasVideo: true },
     { title: 'سباقة حاصل ابتناقية', date: '17 ديسمبر', image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=400&h=250&fit=crop', hasVideo: false },
     { title: 'النادية من السطلي', date: '30 ديسمبر', image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=250&fit=crop', hasVideo: false },
-    { title: 'الكبيادل مصحب ميناقتنا', date: '30 ديسمبر', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop', hasVideo: false }
+    { title: 'الكبيادل مصحب ميناقتنا', date: '30 ديسمبر', image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=250&fit=crop', hasVideo: false }
   ];
 
   categories = [
@@ -122,7 +122,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   galleryImages = [
     { src: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=400&h=300&fit=crop', alt: 'المباراة' },
     { src: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=300&fit=crop', alt: 'الاحتفال' },
-    { src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop', alt: 'التدريب' },
+    { src: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop', alt: 'التدريب' },
     { src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop', alt: 'الجماهير' },
     { src: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop', alt: 'الملعب' },
     { src: 'https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?w=400&h=300&fit=crop', alt: 'الهداف' }
